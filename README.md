@@ -25,64 +25,17 @@ model.param_names
 ```python
 x=np.logspace(-3,3)
 data=pd.DataFrame({'Shear rate':x,'Stress':rm.TC(x,ystress=10,gammadot_crit=0.1,eta_bg=0.8)})
-data.head()
+display(Markdown(data.head().to_markdown()))
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Shear rate</th>
-      <th>Stress</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0.001000</td>
-      <td>11.000800</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.001326</td>
-      <td>11.152456</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.001758</td>
-      <td>11.327117</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0.002330</td>
-      <td>11.528282</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0.003089</td>
-      <td>11.759982</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+|    |   Shear rate |   Stress |
+|---:|-------------:|---------:|
+|  0 |   0.001      |  11.0008 |
+|  1 |   0.00132571 |  11.1525 |
+|  2 |   0.00175751 |  11.3271 |
+|  3 |   0.00232995 |  11.5283 |
+|  4 |   0.00308884 |  11.76   |
 
 
 
@@ -101,19 +54,12 @@ ax.set_xscale('log')
 ax.set_xlabel('$\dot\gamma$ [1/s]')
 ax.set_ylabel('$\sigma$ [Pa]')
 ax.legend()
-ax.set_title('Example Fit')
+ax.set_title('Example Fit');
 ```
 
 
-
-
-    Text(0.5, 1.0, 'Example Fit')
-
-
-
-
     
-![png](README_files/README_4_1.png)
+![png](README_files/README_4_0.png)
     
 
 
@@ -205,5 +151,7 @@ $\sigma=\sigma_y+\eta_{bg}\cdot\dot\gamma$
 ```
 
     [NbConvertApp] Converting notebook README.ipynb to markdown
-    [NbConvertApp] Writing 5100 bytes to README.md
+    [NbConvertApp] Support files will be in README_files\
+    [NbConvertApp] Making directory README_files
+    [NbConvertApp] Writing 6852 bytes to README.md
     
