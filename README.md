@@ -9,6 +9,8 @@ import rheomodel as rm
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from IPython.display import Markdown, Latex
+
 
 model=lmfit.Model(rm.HB)
 model.param_names
@@ -71,7 +73,6 @@ ax.set_title('Example Fit');
 
 
 ```python
-from IPython.display import Markdown, Latex
 import rheomodel as rm
 display(Markdown(rm.library_to_table(rm.library).to_markdown()))
 ```
@@ -90,9 +91,6 @@ display(Markdown(rm.library_to_table(rm.library).to_markdown()))
 
 
 ```python
-import pandas as pd
-from IPython.display import display, Math
-
 for ID, model in rm.models.model_dict.items():
     display(ID, Latex(model.latex))
 ```
@@ -154,4 +152,4 @@ $\sigma=\sigma_y+\eta_{bg}\cdot\dot\gamma$
     [NbConvertApp] Support files will be in README_files\
     [NbConvertApp] Making directory README_files
     [NbConvertApp] Writing 6852 bytes to README.md
-    
+

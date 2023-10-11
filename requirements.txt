@@ -1,0 +1,4 @@
+pandas
+lmfit
+bibtexparser @ git+https://github.com/sciunto-org/python-bibtexparser@main
+tabulate
