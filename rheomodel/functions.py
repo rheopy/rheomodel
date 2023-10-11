@@ -2,7 +2,6 @@
 import bibtexparser
 import pandas as pd
 
-
 library = bibtexparser.parse_file('./rheomodel/models.bib')
 
 
