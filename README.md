@@ -11,143 +11,29 @@ Collection of rheology flow curve models
 
 ```python
 import rheomodel as rm
-rm.library_to_table(rm.library)
+print(rm.library_to_table(rm.library).to_markdown())
 ```
 
+    | ID                     | author                                                      | title                                                                                                                                                             | publisher                                  |   year | address   | journal                                                   |   volume |   number | pages      |
+    |:-----------------------|:------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------|-------:|:----------|:----------------------------------------------------------|---------:|---------:|:-----------|
+    | newton_1687            | Isaac Newton                                                | Philosophiæ Naturalis Principia Mathematica                                                                                                                       | Josephi Streater                           |   1687 | London    | nan                                                       |      nan |      nan | nan        |
+    | ostwald_1929           | Ostwald, Wilhelm                                            | Über die Geschwindigkeitsfunktion der Newton'schen Viscosität                                                                                                     | Walter de Gruyter                          |   1929 | nan       | Zeitschrift für physikalische Chemie                      |      102 |        1 | 64--79     |
+    | bingham_1916           | Bingham, Eugene C.                                          | A new conception of plasticity and viscous flow                                                                                                                   | Elsevier                                   |   1916 | nan       | The Journal of the Franklin Institute                     |      181 |        6 | 543--552   |
+    | herschel_bulkley_1926  | Herschel, Winslow Hobart and Bulkley, Robert                | Measurement of consistency as applied to rubber-benzene solutions                                                                                                 | American Society for Testing and Materials |   1926 | nan       | Proceedings of the American Society for Testing Materials |       26 |        2 | 621--633   |
+    | carreau_yasuda_1979    | Carreau, Pierre J. and Yasuda, Koichi                       | Rheological equations from molecular network theories                                                                                                             | Wiley                                      |   1979 | nan       | Journal of Polymer Science                                |       11 |        2 | 371--388   |
+    | cross_1925             | Cross, Malcolm M.                                           | Viscosity of Colloids                                                                                                                                             | ACS Publications                           |   1925 | nan       | The Journal of Physical Chemistry                         |       29 |       11 | 1409--1426 |
+    | caggioni2020variations | Caggioni, Marco and Trappe, Veronique and Spicer, Patrick T | Variations of the Herschel--Bulkley exponent reflecting contributions of the viscous continuous phase to the shear rate-dependent stress of soft glassy materials | AIP Publishing                             |   2020 | nan       | Journal of Rheology                                       |       64 |        2 | 413--422   |
+    
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>author</th>
-      <th>title</th>
-      <th>publisher</th>
-      <th>year</th>
-      <th>address</th>
-      <th>journal</th>
-      <th>volume</th>
-      <th>number</th>
-      <th>pages</th>
-    </tr>
-    <tr>
-      <th>ID</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>newton_1687</th>
-      <td>Isaac Newton</td>
-      <td>Philosophiæ Naturalis Principia Mathematica</td>
-      <td>Josephi Streater</td>
-      <td>1687</td>
-      <td>London</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>ostwald_1929</th>
-      <td>Ostwald, Wilhelm</td>
-      <td>Über die Geschwindigkeitsfunktion der Newton's...</td>
-      <td>Walter de Gruyter</td>
-      <td>1929</td>
-      <td>NaN</td>
-      <td>Zeitschrift für physikalische Chemie</td>
-      <td>102</td>
-      <td>1</td>
-      <td>64--79</td>
-    </tr>
-    <tr>
-      <th>bingham_1916</th>
-      <td>Bingham, Eugene C.</td>
-      <td>A new conception of plasticity and viscous flow</td>
-      <td>Elsevier</td>
-      <td>1916</td>
-      <td>NaN</td>
-      <td>The Journal of the Franklin Institute</td>
-      <td>181</td>
-      <td>6</td>
-      <td>543--552</td>
-    </tr>
-    <tr>
-      <th>herschel_bulkley_1926</th>
-      <td>Herschel, Winslow Hobart and Bulkley, Robert</td>
-      <td>Measurement of consistency as applied to rubbe...</td>
-      <td>American Society for Testing and Materials</td>
-      <td>1926</td>
-      <td>NaN</td>
-      <td>Proceedings of the American Society for Testin...</td>
-      <td>26</td>
-      <td>2</td>
-      <td>621--633</td>
-    </tr>
-    <tr>
-      <th>carreau_yasuda_1979</th>
-      <td>Carreau, Pierre J. and Yasuda, Koichi</td>
-      <td>Rheological equations from molecular network t...</td>
-      <td>Wiley</td>
-      <td>1979</td>
-      <td>NaN</td>
-      <td>Journal of Polymer Science</td>
-      <td>11</td>
-      <td>2</td>
-      <td>371--388</td>
-    </tr>
-    <tr>
-      <th>cross_1925</th>
-      <td>Cross, Malcolm M.</td>
-      <td>Viscosity of Colloids</td>
-      <td>ACS Publications</td>
-      <td>1925</td>
-      <td>NaN</td>
-      <td>The Journal of Physical Chemistry</td>
-      <td>29</td>
-      <td>11</td>
-      <td>1409--1426</td>
-    </tr>
-    <tr>
-      <th>caggioni2020variations</th>
-      <td>Caggioni, Marco and Trappe, Veronique and Spic...</td>
-      <td>Variations of the Herschel--Bulkley exponent r...</td>
-      <td>AIP Publishing</td>
-      <td>2020</td>
-      <td>NaN</td>
-      <td>Journal of Rheology</td>
-      <td>64</td>
-      <td>2</td>
-      <td>413--422</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+| ID                     | author                                                      | title                                                                                                                                                             | publisher                                  |   year | address   | journal                                                   |   volume |   number | pages      |
+|:-----------------------|:------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------|-------:|:----------|:----------------------------------------------------------|---------:|---------:|:-----------|
+| newton_1687            | Isaac Newton                                                | Philosophiæ Naturalis Principia Mathematica                                                                                                                       | Josephi Streater                           |   1687 | London    | nan                                                       |      nan |      nan | nan        |
+| ostwald_1929           | Ostwald, Wilhelm                                            | Über die Geschwindigkeitsfunktion der Newton'schen Viscosität                                                                                                     | Walter de Gruyter                          |   1929 | nan       | Zeitschrift für physikalische Chemie                      |      102 |        1 | 64--79     |
+| bingham_1916           | Bingham, Eugene C.                                          | A new conception of plasticity and viscous flow                                                                                                                   | Elsevier                                   |   1916 | nan       | The Journal of the Franklin Institute                     |      181 |        6 | 543--552   |
+| herschel_bulkley_1926  | Herschel, Winslow Hobart and Bulkley, Robert                | Measurement of consistency as applied to rubber-benzene solutions                                                                                                 | American Society for Testing and Materials |   1926 | nan       | Proceedings of the American Society for Testing Materials |       26 |        2 | 621--633   |
+| carreau_yasuda_1979    | Carreau, Pierre J. and Yasuda, Koichi                       | Rheological equations from molecular network theories                                                                                                             | Wiley                                      |   1979 | nan       | Journal of Polymer Science                                |       11 |        2 | 371--388   |
+| cross_1925             | Cross, Malcolm M.                                           | Viscosity of Colloids                                                                                                                                             | ACS Publications                           |   1925 | nan       | The Journal of Physical Chemistry                         |       29 |       11 | 1409--1426 |
+| caggioni2020variations | Caggioni, Marco and Trappe, Veronique and Spicer, Patrick T | Variations of the Herschel--Bulkley exponent reflecting contributions of the viscous continuous phase to the shear rate-dependent stress of soft glassy materials | AIP Publishing                             |   2020 | nan       | Journal of Rheology                                       |       64 |        2 | 413--422   |
 
 
 ```python
@@ -155,7 +41,7 @@ rm.library_to_table(rm.library)
 ```
 
     [NbConvertApp] Converting notebook README.ipynb to markdown
-    [NbConvertApp] Writing 4174 bytes to README.md
+    [NbConvertApp] Writing 3739 bytes to README.md
     
 
 
