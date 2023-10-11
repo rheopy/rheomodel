@@ -9,7 +9,7 @@ readme = "README.md"
 license = {file = "LICENSE"}
 classifiers = ["License :: OSI Approved :: MIT License"]
 dynamic = ["version", "description"]
-dependencies = [pandas,lmfit,bibtexparser @ git+https://github.com/sciunto-org/python-bibtexparser@main,tabulate]
+dependencies = ["pandas","lmfit","bibtexparser @ git+https://github.com/sciunto-org/python-bibtexparser@main","tabulate"]
 
 [project.urls]
 Home = "https://github.com/rheopy/rheomodel"
