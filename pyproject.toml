@@ -1,0 +1,15 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "rheomodel"
+authors = [{name = "Marco Caggioni", email = "marco.caggioni@gmail.com"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+dependencies = [pandas,lmfit,bibtexparser @ git+https://github.com/sciunto-org/python-bibtexparser@main,tabulate]
+
+[project.urls]
+Home = "https://github.com/rheopy/rheomodel"
