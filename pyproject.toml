@@ -1,15 +1,30 @@
 [build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
-name = "rheomodel"
-authors = [{name = "Marco Caggioni", email = "marco.caggioni@gmail.com"}]
+name = "rheopy-rheomodel"
+version = "0.1.0"
+description = "Rheological constitutive models with verified academic citations"
 readme = "README.md"
-license = {file = "LICENSE"}
-classifiers = ["License :: OSI Approved :: MIT License"]
-dynamic = ["version", "description"]
-dependencies = ["pandas","lmfit","bibtexparser @ git+https://github.com/sciunto-org/python-bibtexparser@main","tabulate"]
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Marco Caggioni" }]
+keywords = ["rheology", "constitutive models", "flow curve", "viscoplastic"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+dev = ["pytest", "sphinx", "myst-parser", "sphinx-rtd-theme"]
 
 [project.urls]
-Home = "https://github.com/rheopy/rheomodel"
+Homepage = "https://github.com/rheopy/rheomodel"
+Repository = "https://github.com/rheopy/rheomodel"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rheomodel"]
