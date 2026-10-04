@@ -1,6 +1,7 @@
 # rheomodel — rheological constitutive models
 
 [![CI](https://github.com/rheopy/rheomodel/actions/workflows/ci.yml/badge.svg)](https://github.com/rheopy/rheomodel/actions/workflows/ci.yml)
+[![Documentation Status](https://readthedocs.org/projects/rheomodel/badge/?version=latest)](https://rheomodel.readthedocs.io/en/latest/)
 
 Nine flow-curve models as pure Python functions — equations, parameters,
 bounds, and **verified academic citations**. No fitting machinery: that lives
