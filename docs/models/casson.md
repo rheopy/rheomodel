@@ -220,6 +220,6 @@ $$
 
 * **IOCCC / OICC.** (2000). *Viscosity of Cocoa and Chocolate Products*. International Office of Cocoa, Chocolate and Sugar Confectionery, Official Method 46.
 
-* **Merrill, E. W., Cokelet, G. C., Britten, A., & Wells, R. E.** (1963). Non-Newtonian rheology of human blood—effect of fibrinogen and rouleaux formation. *Biophysical Journal*, 3(3), 199–213. [https://doi.org/10.1016/S0006-3495(63](https://doi.org/10.1016/S0006-3495(63))86816-2
+* **Merrill, E. W., Cokelet, G. C., Britten, A., & Wells, R. E.** (1963). Non-Newtonian Rheology of Human Blood — Effect of Fibrinogen Deduced by "Subtraction". *Circulation Research*, 13(1), 48–55. [https://doi.org/10.1161/01.res.13.1.48](https://doi.org/10.1161/01.res.13.1.48)
 
 * **Steffe, J. F.** (1996). *Rheological Methods in Food Process Engineering* (2nd ed.). Freeman Press.
